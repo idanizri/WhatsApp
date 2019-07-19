@@ -104,9 +104,7 @@ public class MainActivity extends AppCompatActivity {
     private void SendUserToSettingsActivity(){
         Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
         //the user cant use the back button to go back to the login
-        settingsIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(settingsIntent);
-        finish();
     }
 
     @Override
@@ -130,9 +128,14 @@ public class MainActivity extends AppCompatActivity {
             RequestNewGroup();
         }
         else if (item.getItemId() == R.id.main_find_friends_option){
-
+            SendUserToFindFriendsActivity();
         }
         return true;
+    }
+
+    private void SendUserToFindFriendsActivity() {
+        Intent findFriendsIntent = new Intent(MainActivity.this, FindFriendsActivity.class);
+        startActivity(findFriendsIntent);
     }
 
     private void RequestNewGroup() {

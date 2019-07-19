@@ -3,11 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactsFragment">
+    tools:context=".RequestFragment">
 
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/contacts_list"
+        android:id="@+id/chat_requests_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        />
 </RelativeLayout>
